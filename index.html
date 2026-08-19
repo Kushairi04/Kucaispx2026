@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="Edisi Terakhir Kucai SPX Express 2026 — pre-order limited 1–8 September 2026.">
+<title>Edisi Terakhir Kucai SPX Express 2026</title>
+
+<style>
+:root {
+  --red:#e50914;
+  --red2:#ff3340;
+  --black:#070707;
+  --dark:#101010;
+  --card:#171717;
+  --white:#f7f7f7;
+  --muted:#a8a8a8;
+  --line:rgba(255,255,255,.1);
+  --max:1180px;
+}
+* { box-sizing:border-box; margin:0; padding:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; }
+html { scroll-behavior:smooth; }
+body {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(229,9,20,.16), transparent 30%),
+    radial-gradient(circle at 85% 30%, rgba(255,255,255,.05), transparent 25%),
+    var(--black);
+  color:var(--white);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+body::before {
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:-1; opacity:.07;
+  background-image:radial-gradient(#fff .7px, transparent .7px); background-size:8px 8px;
+}
+a { color:inherit; text-decoration:none; }
+img { max-width:100%; display:block; }
+.container { width:min(var(--max), calc(100% - 32px)); margin:auto; }
+.section { padding:88px 0; }
+
+/* Typography & Badges */
+.eyebrow {
+  display:inline-flex; align-items:center; gap:8px; padding:7px 12px; 
+  border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.05); 
+  border-radius:999px; font-size:.78rem; font-weight:800; letter-spacing:.13em;
+  text-transform:uppercase; color:#fff;
+}
+.eyebrow::before {
+  content:""; width:7px; height:7px; border-radius:50%; background:var(--red); box-shadow:0 0 14px var(--red);
+}
+h1,h2,h3 { line-height:1.05; letter-spacing:-.035em; }
+h1 { font-size:clamp(2.8rem, 7vw, 6.6rem); text-transform:uppercase; }
+h2 { font-size:clamp(2.1rem, 5vw, 4rem); text-transform:uppercase; }
+h3 { font-size:1.35rem; }
+.red { color:var(--red2); }
+.muted { color:var(--muted); }
+
+/* Navigation */
+.nav {
+  position:fixed; top:0; left:0; right:0; z-index:100; backdrop-filter:blur(18px);
+  background:rgba(7,7,7,.78); border-bottom:1px solid var(--line);
+}
+.nav-inner { height:70px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.logo { font-weight:950; letter-spacing:-.05em; font-size:1.25rem; }
+.logo span { color:var(--red); }
+.nav-links { display:flex; gap:24px; color:#ccc; font-size:.9rem; }
+.nav-links a:hover { color:#fff; }
+.nav-cta {
+  padding:10px 17px; border-radius:10px; background:var(--red);
+  font-weight:900; font-size:.85rem; box-shadow:0 8px 30px rgba(229,9,20,.25); transition:.25s;
+}
+.nav-cta:hover { background:var(--red2); }
+
+/* Hero */
+.hero { padding:135px 0 70px; position:relative; }
+.hero-grid { display:grid; grid-template-columns:1.03fr .97fr; gap:52px; align-items:center; }
+.hero-copy .eyebrow { margin-bottom:22px; }
+.hero-copy p { margin-top:22px; max-width:650px; color:#c2c2c2; font-size:1.08rem; }
+.hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+.btn {
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  min-height:52px; padding:0 22px; border-radius:12px; font-weight:900; 
+  border:1px solid var(--line); transition:.25s ease; cursor:pointer;
+}
+.btn-primary { background:var(--red); border-color:var(--red); box-shadow:0 15px 45px rgba(229,9,20,.25); color:#fff; }
+.btn-primary:hover { transform:translateY(-2px); background:var(--red2); }
+.btn-secondary { background:#151515; color:#fff; }
+.btn-secondary:hover { background:#222; transform:translateY(-2px); }
+.hero-note { margin-top:16px; font-size:.82rem; color:#888; }
+.hero-media {
+  position:relative; border-radius:24px; overflow:hidden; border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 30px 100px rgba(0,0,0,.55); transform:rotate(1deg);
+}
+.hero-media img { width:100%; aspect-ratio:1/1; object-fit:cover; }
+
+/* Urgency */
+.urgency {
+  background:linear-gradient(90deg, #b8000a, var(--red), #b8000a);
+  border-top:1px solid rgba(255,255,255,.15); border-bottom:1px solid rgba(255,255,255,.15);
+}
+.urgency-inner {
+  min-height:64px; display:flex; align-items:center; justify-content:center;
+  gap:20px; flex-wrap:wrap; text-align:center; font-weight:900;
+}
+.countdown { display:flex; gap:7px; }
+.time {
+  min-width:56px; padding:6px 8px; border-radius:8px; background:rgba(0,0,0,.28); text-align:center;
+}
+.time strong { display:block; font-size:1.15rem; line-height:1; }
+.time small { font-size:.58rem; opacity:.75; }
+
+/* Tribute Section */
+.tribute {
+  text-align:center; background: linear-gradient(to bottom, var(--black), rgba(229,9,20,.05), var(--black));
+  border-bottom: 1px solid rgba(255,255,255,.05); padding: 100px 0;
+}
+.tribute-inner { max-width: 850px; margin: auto; position: relative; }
+.tribute blockquote {
+  font-size: clamp(1.2rem, 3.5vw, 1.6rem); font-style: italic; font-weight: 400; line-height: 1.6; color: #ddd; position: relative; z-index: 2;
+}
+.quote-icon {
+  font-family: serif; font-size: 8rem; color: var(--red); opacity: 0.15; position: absolute;
+  top: -60px; left: 50%; transform: translateX(-50%); line-height: 1; z-index: 1;
+}
+.tribute-author { margin-top: 30px; font-size: .95rem; font-weight: 800; color: var(--red2); text-transform: uppercase; letter-spacing: .15em; }
+
+/* General Sections */
+.section-head { max-width:760px; margin-bottom:42px; }
+.section-head p { color:var(--muted); margin-top:15px; }
+
+/* Pricing Grid */
+.price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top:30px; }
+.price-card {
+  padding:24px; background:linear-gradient(145deg, #1a1a1a, #101010);
+  border:1px solid var(--line); border-radius:16px;
+}
+.price-card h3 { color: var(--red2); margin-bottom: 12px; }
+.price-list { list-style: none; color:#ccc; font-size: .95rem; }
+.price-list li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed rgba(255,255,255,.1); }
+.price-list li:last-child { border-bottom: none; }
+.price-list strong { color: #fff; }
+
+/* Order Form Section */
+.order-section { background: #0c0c0c; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 80px 0; }
+.form-container {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px; 
+  background: #111; border: 1px solid var(--line); border-radius: 24px; padding: 40px;
+}
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-size: .9rem; color: #ccc; font-weight: 600; }
+.form-control {
+  width: 100%; padding: 14px 16px; background: #1a1a1a; border: 1px solid #333; 
+  border-radius: 10px; color: #fff; font-size: 1rem; transition: .2s; outline: none;
+}
+.form-control:focus { border-color: var(--red); background: #222; }
+textarea.form-control { resize: vertical; min-height: 100px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* Receipt / QR Box */
+.receipt-box {
+  background: linear-gradient(145deg, #1a1a1a, #101010); border: 1px solid var(--line);
+  border-radius: 16px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between;
+}
+.total-display {
+  background: rgba(229,9,20,.1); border: 1px solid rgba(229,9,20,.3);
+  padding: 20px; border-radius: 12px; text-align: center; margin-bottom: 25px;
+}
+.total-display span { display: block; font-size: .9rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px; }
+.total-display h2 { font-size: 3rem; color: #fff; margin-top: 5px; }
+.qr-container { text-align: center; margin-bottom: 25px; }
+.qr-container img { width: 200px; max-width: 100%; margin: 0 auto 15px; border-radius: 12px; border: 2px solid #333; }
+.qr-container p { font-size: .85rem; color: #888; }
+.submit-btn { width: 100%; font-size: 1.1rem; padding: 18px; }
+
+/* FAQ */
+.faq { max-width:820px; margin:auto; }
+details { border:1px solid var(--line); border-radius:14px; margin-bottom:10px; background:#111; overflow:hidden; }
+summary { cursor:pointer; list-style:none; padding:20px 22px; font-weight:850; display:flex; justify-content:space-between; gap:20px; }
+summary::-webkit-details-marker { display:none; }
+summary::after { content:"+"; color:var(--red2); font-size:1.4rem; }
+details[open] summary::after { content:"−"; }
+details p { padding:0 22px 20px; color:#aaa; }
+
+footer { padding:28px 0 100px; border-top:1px solid var(--line); color:#777; font-size:.82rem; }
+.footer-inner { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+
+/* Animations & Mobile */
+.reveal { opacity:0; transform:translateY(20px); transition:.7s ease; }
+.reveal.visible { opacity:1; transform:none; }
+
+@media(max-width:900px){
+  .form-container { grid-template-columns: 1fr; padding: 25px; }
+}
+@media(max-width:850px){
+  .nav-links { display:none; }
+  .hero { padding-top:110px; }
+  .hero-grid { grid-template-columns:1fr; }
+  .hero-media { max-width:650px; margin:auto; transform:none; }
+  .section { padding:68px 0; }
+  .tribute { padding: 70px 0; }
+}
+@media(max-width:520px){
+  .container { width:min(var(--max), calc(100% - 22px)); }
+  .nav-inner { height:62px; }
+  .nav-cta { padding:9px 12px; font-size:.75rem; }
+  h1 { font-size:clamp(2.55rem, 15vw, 4rem); }
+  .btn { width:100%; }
+  .hero-actions .btn { flex:1 1 100%; }
+  .form-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="logo">KUCAI <span>SPX 2026</span></a>
+    <nav class="nav-links">
+      <a href="#why">Kenapa</a>
+      <a href="#pricing">Harga</a>
+      <a href="#order">Borang</a>
+    </nav>
+    <a class="nav-cta" href="#order">TEMPAH SEKARANG</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">PRE-ORDER • 1–8 SEPTEMBER 2026</span>
+      <h1>Kerja Jalan.<br><span class="red">Gaya Pun Jalan.</span></h1>
+      <p>
+        <strong>Edisi Terakhir Kucai SPX Express 2026</strong> — streetwear khas untuk hero-hero
+        delivery, pickup & team SPX yang mahukan gaya lebih padu tanpa kompromi pada keselesaan.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#order">🔥 ISI BORANG TEMPAHAN</a>
+        <a class="btn btn-secondary" href="#pricing">Lihat Senarai Harga ↓</a>
+      </div>
+      <div class="hero-note">⚠️ Pre-order sahaja • Edisi Terakhir • Tiada ready stock</div>
+    </div>
+
+    <div class="hero-media reveal">
+      <img src="baju.png" alt="Edisi Terakhir Kucai SPX Express 2026" onerror="this.src='https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80'">
+    </div>
+  </div>
+</section>
+
+<section class="urgency">
+  <div class="container urgency-inner">
+    <div>⏳ ORDER DITUTUP DALAM:</div>
+    <div class="countdown" id="countdown">
+      <div class="time"><strong id="days">--</strong><small>HARI</small></div>
+      <div class="time"><strong id="hours">--</strong><small>JAM</small></div>
+      <div class="time"><strong id="mins">--</strong><small>MIN</small></div>
+      <div class="time"><strong id="secs">--</strong><small>SAAT</small></div>
+    </div>
+    <div>8 SEPTEMBER 2026</div>
+  </div>
+</section>
+
+<section class="tribute">
+  <div class="container tribute-inner reveal">
+    <div class="quote-icon">“</div>
+    <blockquote>
+      "Panas mentari dan lebat hujan dah jadi kawan setia. Beribu kilometer jalan raya telah kita redah bersama demi sebuah amanah. Baju ini bukan sekadar kain, ia adalah saksi bisu titik peluh dan perjuangan tak didendang setiap hero jalanan. Edisi terakhir ini kita hasilkan sebagai tanda penghormatan teragung. Terima kasih untuk segalanya, mari kita jadikan edisi penutup ini sebuah memori terindah."
+    </blockquote>
+    <div class="tribute-author">— Penghormatan Buat Hero SPX</div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">SENARAI HARGA</span>
+      <h2>Harga Penuh <span class="red">Ketelusan.</span></h2>
+      <p>Pilih mengikut keselesaan anda. Harga asas bermula RM40 untuk lengan pendek (S hingga 2XL).</p>
+    </div>
+
+    <div class="price-grid reveal">
+      <div class="price-card">
+        <h3>Pakej Asas</h3>
+        <ul class="price-list">
+          <li><span>Baju Lengan Pendek (S - 2XL)</span> <strong>RM 40</strong></li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h3>Add-On Rekaan</h3>
+        <ul class="price-list">
+          <li><span>Lengan Panjang</span> <strong>+ RM 7</strong></li>
+          <li><span>Tambah Kolar</span> <strong>+ RM 8</strong></li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h3>Add-On Saiz Ekstra</h3>
+        <ul class="price-list">
+          <li><span>Saiz 3XL - 5XL</span> <strong>+ RM 5</strong></li>
+          <li><span>Saiz 6XL - 7XL</span> <strong>+ RM 10</strong></li>
+          <li><span>Saiz 8XL - 9XL</span> <strong>+ RM 12</strong></li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h3>Penghantaran</h3>
+        <ul class="price-list">
+          <li><span>Self Collection (Gombak)</span> <strong>PERCUMA</strong></li>
+          <li><span>Semenanjung Malaysia</span> <strong>RM 8</strong></li>
+          <li><span>Sabah / Sarawak</span> <strong>RM 16</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="order-section" id="order">
+  <div class="container">
+    <div class="section-head reveal" style="text-align: center; margin: 0 auto 40px;">
+      <span class="eyebrow">LENGKAPKAN TEMPAHAN</span>
+      <h2>Borang <span class="red">Tempahan.</span></h2>
+      <p>Isi butiran di bawah. Sistem akan mengira jumlah dan menjana mesej WhatsApp secara automatik untuk anda.</p>
+    </div>
+
+    <div class="form-container reveal">
+      <!-- Borang Kiri -->
+      <div class="form-details">
+        <h3 style="margin-bottom: 20px; color: var(--red2);">1. Butiran Diri & Pilihan</h3>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nama Penuh</label>
+            <input type="text" id="custName" class="form-control" placeholder="Ali bin Abu" required>
+          </div>
+          <div class="form-group">
+            <label>Team SPX (Kawasan)</label>
+            <input type="text" id="custTeam" class="form-control" placeholder="Cth: Hub Gombak" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Nombor Telefon (WhatsApp)</label>
+          <input type="tel" id="custPhone" class="form-control" placeholder="0123456789" required>
+        </div>
+
+        <div class="form-group">
+          <label>Alamat Penghantaran (Letak '-' jika Self Pickup)</label>
+          <textarea id="custAddress" class="form-control" placeholder="Alamat penuh rumah / hub anda..."></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Saiz Baju</label>
+            <select id="selSize" class="form-control" onchange="calculateTotal()">
+              <option value="0" data-label="S">S (RM40)</option>
+              <option value="0" data-label="M">M (RM40)</option>
+              <option value="0" data-label="L">L (RM40)</option>
+              <option value="0" data-label="XL">XL (RM40)</option>
+              <option value="0" data-label="2XL">2XL (RM40)</option>
+              <option value="5" data-label="3XL">3XL (+RM5)</option>
+              <option value="5" data-label="4XL">4XL (+RM5)</option>
+              <option value="5" data-label="5XL">5XL (+RM5)</option>
+              <option value="10" data-label="6XL">6XL (+RM10)</option>
+              <option value="10" data-label="7XL">7XL (+RM10)</option>
+              <option value="12" data-label="8XL">8XL (+RM12)</option>
+              <option value="12" data-label="9XL">9XL (+RM12)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Kuantiti Baju Ini</label>
+            <input type="number" id="custQty" class="form-control" value="1" min="1" onchange="calculateTotal()" onkeyup="calculateTotal()">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Pilihan Lengan</label>
+            <select id="selSleeve" class="form-control" onchange="calculateTotal()">
+              <option value="0" data-label="Pendek">Lengan Pendek (Percuma)</option>
+              <option value="7" data-label="Panjang">Lengan Panjang (+RM7)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Pilihan Kolar</label>
+            <select id="selCollar" class="form-control" onchange="calculateTotal()">
+              <option value="0" data-label="Round Neck (Tiada Kolar)">Round Neck (Tiada Kolar)</option>
+              <option value="8" data-label="Berkolar">Berkolar (+RM8)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Kaedah Penghantaran</label>
+          <select id="selShipping" class="form-control" onchange="calculateTotal()">
+            <option value="0" data-label="Self Collection Gombak">Self Collection Sekitar Gombak (Percuma)</option>
+            <option value="8" data-label="Semenanjung Malaysia">Semenanjung Malaysia (RM8)</option>
+            <option value="16" data-label="Sabah/Sarawak">Sabah / Sarawak (RM16)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Nota Tambahan (Pilihan - jika order saiz berbeza, dll)</label>
+          <input type="text" id="custNotes" class="form-control" placeholder="Cth: Saya nak 1 lagi saiz M...">
+        </div>
+
+      </div>
+
+      <!-- Total & QR Kanan -->
+      <div class="receipt-box">
+        <div>
+          <h3 style="margin-bottom: 20px; color: var(--red2);">2. Bayaran & Sahkan</h3>
+          
+          <div class="total-display">
+            <span>Jumlah Perlu Dibayar</span>
+            <h2 id="displayTotal">RM 40</h2>
+          </div>
+
+          <div class="qr-container">
+            <img src="qr-code.png" alt="QR Pay Malaysia" onerror="this.style.display='none'">
+            <p><strong>Kushairi (****2211)</strong><br>Sila scan & bayar guna mana-mana app e-wallet/bank. <strong>Screenshot resit!</strong></p>
+          </div>
+        </div>
+
+        <button onclick="submitOrder()" class="btn btn-primary submit-btn">📲 HANTAR RESIT KE WHATSAPP</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div><strong>Edisi Terakhir Kucai SPX Express 2026</strong> — Streetwear Limited Drop</div>
+    <div>© 2026 • Pre-order 1–8 September 2026</div>
+  </div>
+</footer>
+
+<script>
+/* Countdown */
+const deadline = new Date("2026-09-08T23:59:59+08:00").getTime();
+function updateCountdown() {
+  const now = Date.now();
+  let diff = Math.max(0, deadline - now);
+  const d = Math.floor(diff / 86400000); diff %= 86400000;
+  const h = Math.floor(diff / 3600000); diff %= 3600000;
+  const m = Math.floor(diff / 60000); diff %= 60000;
+  const s = Math.floor(diff / 1000);
+
+  document.getElementById("days").textContent = String(d).padStart(2,"0");
+  document.getElementById("hours").textContent = String(h).padStart(2,"0");
+  document.getElementById("mins").textContent = String(m).padStart(2,"0");
+  document.getElementById("secs").textContent = String(s).padStart(2,"0");
+
+  if (deadline - now <= 0) {
+    document.querySelector(".urgency-inner").innerHTML = "<strong>⚠️ PRE-ORDER TELAH DITUTUP</strong>";
+  }
+}
+updateCountdown(); setInterval(updateCountdown, 1000);
+
+/* Scroll Animations */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); }
+  });
+}, { threshold:.12 });
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+/* Kalkulator Harga */
+let finalTotal = 40;
+
+function calculateTotal() {
+  const basePrice = 40;
+  const sizeSelect = document.getElementById("selSize");
+  const sizeExtra = parseInt(sizeSelect.value) || 0;
+  
+  const sleeveSelect = document.getElementById("selSleeve");
+  const sleeveExtra = parseInt(sleeveSelect.value) || 0;
+  
+  const collarSelect = document.getElementById("selCollar");
+  const collarExtra = parseInt(collarSelect.value) || 0;
+  
+  let qty = parseInt(document.getElementById("custQty").value) || 1;
+  if(qty < 1) { qty = 1; document.getElementById("custQty").value = 1; }
+
+  const shippingSelect = document.getElementById("selShipping");
+  const shippingCost = parseInt(shippingSelect.value) || 0;
+
+  const perShirtCost = basePrice + sizeExtra + sleeveExtra + collarExtra;
+  finalTotal = (perShirtCost * qty) + shippingCost;
+
+  document.getElementById("displayTotal").innerText = `RM ${finalTotal}`;
+}
+
+/* Hantar ke WhatsApp */
+function submitOrder() {
+  const name = document.getElementById("custName").value.trim();
+  const team = document.getElementById("custTeam").value.trim();
+  const phone = document.getElementById("custPhone").value.trim();
+  const address = document.getElementById("custAddress").value.trim();
+  const qty = document.getElementById("custQty").value;
+  const notes = document.getElementById("custNotes").value.trim();
+
+  if(!name || !team || !phone) {
+    alert("Sila isi Nama, Team dan Nombor Telefon sebelum menghantar pesanan.");
+    return;
+  }
+
+  const selSize = document.getElementById("selSize");
+  const sizeLabel = selSize.options[selSize.selectedIndex].getAttribute("data-label");
+
+  const selSleeve = document.getElementById("selSleeve");
+  const sleeveLabel = selSleeve.options[selSleeve.selectedIndex].getAttribute("data-label");
+
+  const selCollar = document.getElementById("selCollar");
+  const collarLabel = selCollar.options[selCollar.selectedIndex].getAttribute("data-label");
+
+  const selShipping = document.getElementById("selShipping");
+  const shippingLabel = selShipping.options[selShipping.selectedIndex].getAttribute("data-label");
+
+  let msg = `🔥 *TEMPAHAN EDISI TERAKHIR KUCAI SPX 2026* 🔥\n\n`;
+  msg += `*BUTIRAN DIRI*\n`;
+  msg += `Nama: ${name}\n`;
+  msg += `Team: ${team}\n`;
+  msg += `No Tel: ${phone}\n`;
+  msg += `Alamat: ${address || '-'}\n\n`;
+  
+  msg += `*PILIHAN BAJU*\n`;
+  msg += `Saiz: ${sizeLabel}\n`;
+  msg += `Kuantiti: ${qty} helai\n`;
+  msg += `Lengan: ${sleeveLabel}\n`;
+  msg += `Kolar: ${collarLabel}\n\n`;
+  
+  msg += `*PENGHANTARAN*\n`;
+  msg += `Kaedah: ${shippingLabel}\n\n`;
+
+  if(notes) {
+    msg += `*NOTA TAMBAHAN*\n${notes}\n\n`;
+  }
+
+  msg += `*JUMLAH BAYARAN: RM ${finalTotal}*\n\n`;
+  msg += `_Saya akan sertakan gambar resit pembayaran QR Pay sebentar lagi._`;
+
+  const encodedMsg = encodeURIComponent(msg);
+  const waUrl = `https://wa.me/60136201301?text=${encodedMsg}`;
+  
+  window.open(waUrl, "_blank");
+}
+
+// Run initial calculation on load
+window.onload = function() {
+  calculateTotal();
+};
+</script>
+
+</body>
+</html>
+
+
