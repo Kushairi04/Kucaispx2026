@@ -59,6 +59,7 @@ h3 { font-size:1.35rem; }
 /* Navigation */
 .nav {
   position:fixed; top:0; left:0; right:0; z-index:100; backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
   background:rgba(7,7,7,.78); border-bottom:1px solid var(--line);
 }
 .nav-inner { height:70px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
@@ -129,6 +130,82 @@ h3 { font-size:1.35rem; }
 .section-head { max-width:760px; margin-bottom:42px; }
 .section-head p { color:var(--muted); margin-top:15px; }
 
+/* Past Editions Gallery */
+.gallery-section {
+  background: var(--dark);
+  border-bottom: 1px solid var(--line);
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+.gallery-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+  background: #111;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.gallery-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(229,9,20,.5);
+}
+.gallery-img-wrapper {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  background: #000;
+}
+.gallery-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.5s ease;
+}
+.gallery-item:hover .gallery-img-wrapper img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+}
+.gallery-tag {
+  align-self: flex-start;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.gallery-overlay h3 {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+.gallery-overlay p {
+  color: var(--red2);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 /* Pricing Grid */
 .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top:30px; }
 .price-card {
@@ -172,6 +249,31 @@ textarea.form-control { resize: vertical; min-height: 100px; }
 .qr-container img { width: 200px; max-width: 100%; margin: 0 auto 15px; border-radius: 12px; border: 2px solid #333; }
 .qr-container p { font-size: .85rem; color: #888; }
 .submit-btn { width: 100%; font-size: 1.1rem; padding: 18px; }
+
+/* Custom Modal Alert */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center; z-index: 9999;
+  opacity: 0; pointer-events: none; transition: 0.3s ease;
+}
+.modal-overlay.active {
+  opacity: 1; pointer-events: all;
+}
+.modal-box {
+  background: var(--card); padding: 35px 30px; border-radius: 20px; border: 1px solid rgba(229,9,20,.4);
+  max-width: 420px; width: 90%; text-align: center; transform: translateY(30px); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+.modal-overlay.active .modal-box {
+  transform: translateY(0);
+}
+.modal-box .icon {
+  font-size: 3rem; display: block; margin-bottom: 15px;
+}
+.modal-box h4 { color: var(--red2); margin-bottom: 12px; font-size: 1.4rem; text-transform: uppercase; letter-spacing: -0.02em; }
+.modal-box p { color: #ccc; margin-bottom: 28px; font-size: 1rem; line-height: 1.5; }
+.modal-box .btn { width: 100%; font-size: 1rem; padding: 14px; }
 
 /* FAQ */
 .faq { max-width:820px; margin:auto; }
@@ -219,6 +321,7 @@ footer { padding:28px 0 100px; border-top:1px solid var(--line); color:#777; fon
     <a href="#top" class="logo">KUCAI <span>SPX 2026</span></a>
     <nav class="nav-links">
       <a href="#why">Kenapa</a>
+      <a href="#galeri">Koleksi Terdahulu</a>
       <a href="#pricing">Harga</a>
       <a href="#order">Borang</a>
     </nav>
@@ -228,7 +331,7 @@ footer { padding:28px 0 100px; border-top:1px solid var(--line); color:#777; fon
 
 <main id="top">
 
-<section class="hero">
+<section class="hero" id="why">
   <div class="container hero-grid">
     <div class="hero-copy reveal">
       <span class="eyebrow">PRE-ORDER • 1–8 SEPTEMBER 2026</span>
@@ -239,9 +342,9 @@ footer { padding:28px 0 100px; border-top:1px solid var(--line); color:#777; fon
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#order">🔥 ISI BORANG TEMPAHAN</a>
-        <a class="btn btn-secondary" href="#pricing">Lihat Senarai Harga ↓</a>
+        <a class="btn btn-secondary" href="#pricing">Lihat Senarai Harga &darr;</a>
       </div>
-      <div class="hero-note">⚠️ Pre-order sahaja • Edisi Terakhir • Tiada ready stock</div>
+      <div class="hero-note">⚠️ Pre-order sahaja &bull; Edisi Terakhir &bull; Tiada ready stock</div>
     </div>
 
     <div class="hero-media reveal">
@@ -263,13 +366,80 @@ footer { padding:28px 0 100px; border-top:1px solid var(--line); color:#777; fon
   </div>
 </section>
 
+<!-- Koleksi Terdahulu Section -->
+<section class="section gallery-section" id="galeri">
+  <div class="container">
+    <div class="section-head reveal" style="margin-inline: auto; text-align: center;">
+      <span class="eyebrow">ARKIB KUCAI SPX</span>
+      <h2>Koleksi <span class="red">Lagenda.</span></h2>
+      <p>Empat edisi terdahulu yang pernah gegarkan jalanan. Kesemuanya telah dihentikan pengeluarannya secara rasmi (Stop Production).</p>
+    </div>
+
+    <div class="gallery-grid reveal">
+      
+      <!-- Edisi 1 -->
+      <div class="gallery-item">
+        <div class="gallery-img-wrapper">
+          <!-- Ganti 'edisi1.jpg' dengan nama fail gambar sebenar jika ada -->
+          <img src="edisi1.jpg" alt="Kucai SPX Edisi Pertama" onerror="this.src='https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=600&q=80'">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Stop Production</span>
+            <h3>Edisi Pertama</h3>
+            <p>The Origin</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Edisi 2 -->
+      <div class="gallery-item">
+        <div class="gallery-img-wrapper">
+          <!-- Ganti 'edisi2.jpg' dengan nama fail gambar sebenar jika ada -->
+          <img src="edisi2.jpg" alt="Kucai SPX Edisi Kedua" onerror="this.src='https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&w=600&q=80'">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Stop Production</span>
+            <h3>Edisi Kedua</h3>
+            <p>V2 Evolution</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Edisi 3 -->
+      <div class="gallery-item">
+        <div class="gallery-img-wrapper">
+          <!-- Ganti 'edisi3.jpg' dengan nama fail gambar sebenar jika ada -->
+          <img src="edisi3.jpg" alt="Kucai SPX Edisi Ketiga" onerror="this.src='https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=600&q=80'">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Stop Production</span>
+            <h3>Edisi Ketiga</h3>
+            <p>Streetwear Series</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Edisi 4 -->
+      <div class="gallery-item">
+        <div class="gallery-img-wrapper">
+          <!-- Ganti 'edisi4.jpg' dengan nama fail gambar sebenar jika ada -->
+          <img src="edisi4.jpg" alt="Kucai SPX Edisi Keempat" onerror="this.src='https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=600&q=80'">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Stop Production</span>
+            <h3>Edisi Keempat</h3>
+            <p>The Dark Rider</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section class="tribute">
   <div class="container tribute-inner reveal">
     <div class="quote-icon">“</div>
     <blockquote>
       "Panas mentari dan lebat hujan dah jadi kawan setia. Beribu kilometer jalan raya telah kita redah bersama demi sebuah amanah. Baju ini bukan sekadar kain, ia adalah saksi bisu titik peluh dan perjuangan tak didendang setiap hero jalanan. Edisi terakhir ini kita hasilkan sebagai tanda penghormatan teragung. Terima kasih untuk segalanya, mari kita jadikan edisi penutup ini sebuah memori terindah."
     </blockquote>
-    <div class="tribute-author">— Penghormatan Buat Hero SPX</div>
+    <div class="tribute-author">&mdash; Penghormatan Buat Hero SPX</div>
   </div>
 </section>
 
@@ -430,14 +600,32 @@ footer { padding:28px 0 100px; border-top:1px solid var(--line); color:#777; fon
 
 </main>
 
+<!-- Custom Alert Modal (Replaces default alert()) -->
+<div id="alertModal" class="modal-overlay">
+  <div class="modal-box">
+    <span class="icon">⚠️</span>
+    <h4>Maklumat Tidak Lengkap</h4>
+    <p>Sila pastikan anda mengisi <strong>Nama</strong>, <strong>Team</strong> dan <strong>Nombor Telefon</strong> sebelum meneruskan pesanan.</p>
+    <button onclick="closeAlert()" class="btn btn-primary">Faham, Kembali</button>
+  </div>
+</div>
+
 <footer>
   <div class="container footer-inner">
-    <div><strong>Edisi Terakhir Kucai SPX Express 2026</strong> — Streetwear Limited Drop</div>
-    <div>© 2026 • Kushairi Razak SPX</div>
+    <div><strong>Edisi Terakhir Kucai SPX Express 2026</strong> &mdash; Streetwear Limited Drop</div>
+    <div>&copy; 2026 &bull; Kushairi Razak SPX</div>
   </div>
 </footer>
 
 <script>
+/* Custom Alert Functions */
+function showAlert() {
+  document.getElementById('alertModal').classList.add('active');
+}
+function closeAlert() {
+  document.getElementById('alertModal').classList.remove('active');
+}
+
 /* Countdown */
 const deadline = new Date("2026-09-08T23:59:59+08:00").getTime();
 function updateCountdown() {
@@ -502,8 +690,9 @@ function submitOrder() {
   const qty = document.getElementById("custQty").value;
   const notes = document.getElementById("custNotes").value.trim();
 
+  // Validate form fields using custom modal instead of standard alert
   if(!name || !team || !phone) {
-    alert("Sila isi Nama, Team dan Nombor Telefon sebelum menghantar pesanan.");
+    showAlert();
     return;
   }
 
@@ -556,5 +745,3 @@ window.onload = function() {
 
 </body>
 </html>
-
-
